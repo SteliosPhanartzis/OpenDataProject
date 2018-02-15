@@ -19,4 +19,4 @@ Spreadsheets are included but will be updated. Links for the spreadsheets will b
 
 ### Collaborators
 - [JazmynFuller](https://github.com/JazmynFuller)
-- [JustJacky](https://github.com/Just Jacky) 
+- [JustJacky](https://github.com/JustJacky) 

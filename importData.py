@@ -18,6 +18,16 @@ import pandas as pd
 
 #Food Vendor Table
 fv_url = 'https://data.cityofnewyork.us/resource/d9fw-zp4j.json'
+#Restaurant Grade Table
+rg_url = 'https://data.cityofnewyork.us/resource/xx67-kt59.json'
+
+#Possible Links
+##https://www.nycgovparks.org/bigapps/DPR_Eateries_001.json
+##https://www.nycgovparks.org/bigapps/DPR_Concessions_001.json
+##https://data.cityofnewyork.us/resource/czg9-hfnz.json
+##https://data.cityofnewyork.us/resource/mp9e-iwqn.json
+##https://data.cityofnewyork.us/resource/8iba-ij2b.json
+
 #Load table
 fv_t = pd.read_json(fv_url)
 #Display rows

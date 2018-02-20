@@ -28,17 +28,32 @@ rg_url = 'https://data.cityofnewyork.us/resource/xx67-kt59.json'
 ##https://data.cityofnewyork.us/resource/mp9e-iwqn.json
 ##https://data.cityofnewyork.us/resource/8iba-ij2b.json
 
-#Load table
+#Load Food Vendor Table
 fv_t = pd.read_json(fv_url)
 #Display rows
 fv_t.head()
 #Get the first row
-row = fv_t.iloc[0]
+#fv_row = fv_t.iloc[0]
 #Get attributes from the first row
-row['company_name']
-row['address']
+#fv_row['company_name']
+#fv_row['address']
 #Get selected columns for the selected rows
 fv_t[['company_name','address','subindustry','sub_subindustry']][0:]
 #Length of list
 print(len(fv_t))
 print(fv_t)
+
+#Load Restaurant Grade Table
+rg_t = pd.read_json(rg_url)
+#Display rows
+rg_t.head()
+#Get the first row
+#rg_row = rg_t.iloc[0]
+#Get attributes from the first row
+#rg_row['company_name']
+#rg_row['address']
+#Get selected columns for the selected rows
+rg_t[['dba','boro','street','zipcode','cuisine_description','grade','score']][0:]
+#Length of list
+print(len(rg_t))
+print(rg_t)

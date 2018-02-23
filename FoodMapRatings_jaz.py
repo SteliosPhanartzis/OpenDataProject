@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[13]:
+# In[9]:
 
 
 import pandas as pd
@@ -13,7 +13,7 @@ import datetime
 dt = datetime.datetime.now()
 
 
-# In[14]:
+# In[10]:
 
 
 url = 'https://www.nycgovparks.org/bigapps/DPR_Eateries_001.json'
@@ -27,7 +27,7 @@ fvt[['name','end_date','permit_number','park_id','type_name']]
 
 
 
-# In[19]:
+# In[11]:
 
 
 getName = ""
@@ -45,6 +45,7 @@ def validName(getName):
 #Asks user if they want to check another Food Stations     
 def check():
     user = input("Check if another Food Station is valid? ")
+    print('\n')
     if (user.lower() == 'yes'):
         getName = input("Enter name of Food Station: ")
         match(getName)
@@ -86,7 +87,16 @@ listName = str(fvt_name)
         
 
 
-# In[17]:
+# In[30]:
+
+
+#Create a new table of just the permit numbers that are expired, with location and name
+extracted_data = {"Name": [fvt['name'][0:248]], 'Location': [fvt['location'][0:248]]}
+df = pd.DataFrame(extracted_data, columns = ['Name', 'Location'])
+df
+
+
+# In[16]:
 
 
 fvt

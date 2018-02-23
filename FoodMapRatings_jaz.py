@@ -27,7 +27,7 @@ fvt[['name','end_date','permit_number','park_id','type_name']]
 
 
 
-# In[16]:
+# In[19]:
 
 
 getName = ""
@@ -63,9 +63,11 @@ def match(getName):
 #Checks if Food Station Permit is Expired        
 def isItExpired(endDate):
     i = str(endDate)
+    pn = fvt.iloc[endDate]['permit_number']
     expiration = fvt.iloc[endDate]['end_date']
     if(i < currentDate):
         print("Permit for" + getName + " expired on " + str(expiration) +". Citation needed!" )
+        print("Permit Number: " + str(pn))
     elif(i > currentDate):
         print("Permit is still valid")
         check()
@@ -84,7 +86,7 @@ listName = str(fvt_name)
         
 
 
-# In[ ]:
+# In[17]:
 
 
 fvt

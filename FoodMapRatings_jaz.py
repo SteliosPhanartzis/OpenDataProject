@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[13]:
 
 
 import pandas as pd
@@ -13,7 +13,7 @@ import datetime
 dt = datetime.datetime.now()
 
 
-# In[2]:
+# In[14]:
 
 
 url = 'https://www.nycgovparks.org/bigapps/DPR_Eateries_001.json'
@@ -27,7 +27,7 @@ fvt[['name','end_date','permit_number','park_id','type_name']]
 
 
 
-# In[ ]:
+# In[16]:
 
 
 getName = ""
@@ -63,8 +63,9 @@ def match(getName):
 #Checks if Food Station Permit is Expired        
 def isItExpired(endDate):
     i = str(endDate)
+    expiration = fvt.iloc[endDate]['end_date']
     if(i < currentDate):
-        print("Permit for" + getName + " expired on" + endDate +". Citation needed!" )
+        print("Permit for" + getName + " expired on " + str(expiration) +". Citation needed!" )
     elif(i > currentDate):
         print("Permit is still valid")
         check()
